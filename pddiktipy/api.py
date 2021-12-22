@@ -273,7 +273,7 @@ class api(object):
 
     ## Detail Page Dosen
     def detail_dosen_by_name(self, keyword):
-        uuid = self.get_mahasiswa_website_by_name(keyword)
+        uuid = self.get_dosen_website_by_name(keyword)
         endpoint = self.api_link+uuid.replace('/data_dosen','detail_dosen')
         return self.H.response(endpoint)
 
