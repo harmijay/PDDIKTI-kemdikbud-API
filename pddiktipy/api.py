@@ -290,4 +290,9 @@ class api(object):
         endpoint = self.api_link+uuid.replace('/data_mahasiswa','detail_mhs')
         return self.H.response(endpoint)
 
-
+    """
+    Get detail kampus baru
+    """
+    def get_kampus_detail_by_hash(self, keyword):
+        endpoint = self.api_link+"v2/detail_pt/"+self.H.parse(keyword)
+        return self.H.response(endpoint)
